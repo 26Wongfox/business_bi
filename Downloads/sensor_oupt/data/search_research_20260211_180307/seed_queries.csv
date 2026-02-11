@@ -1,0 +1,31 @@
+seed_id,lang,w_type,query_prefix
+ZH01,zh,WHO,宝妈在家带娃 谁
+ZH02,zh,WHO,打工人下班后 谁
+ZH03,zh,WHO,自媒体新手没粉丝 谁
+ZH04,zh,WHEN,大学生课多又忙 什么时候
+ZH05,zh,WHEN,上班族晚上做副业 几点
+ZH06,zh,WHEN,新号刚起步 前几天
+ZH07,zh,WHERE,县城做副业 去哪找客户
+ZH08,zh,WHERE,AI模板做好了 发到哪里
+ZH09,zh,WHERE,做中英文市场 在哪个平台
+ZH10,zh,WHAT,会剪视频 做什么副业
+ZH11,zh,WHAT,会写文案 做什么副业
+ZH12,zh,WHAT,Excel不错 能做什么
+ZH13,zh,WHY,小红书有浏览没成交 为什么
+ZH14,zh,WHY,工具做出来卖不动 为什么
+ZH15,zh,WHY,接单收入不稳定 为什么
+ZH16,zh,HOW,不会编程 怎么做AI副业
+ZH17,zh,HOW,宝妈每天1小时 怎么做副业
+ZH18,zh,HOW,设计师不想卖时间 怎么办
+ZH19,zh,HOW,英语一般 怎么做海外副业
+ZH20,zh,HOW,一个人零预算 怎么开始
+EN01,en,WHO,busy moms at home who
+EN02,en,WHO,after-work employees who need
+EN03,en,WHEN,best time to post side hustle content
+EN04,en,WHEN,when to launch an ai tool
+EN05,en,WHERE,where to find first side hustle clients
+EN06,en,WHERE,where to sell ai templates
+EN07,en,WHAT,what ai micro tool can I sell
+EN08,en,WHY,why side hustle content gets views no sales
+EN09,en,HOW,how to build ai side hustle without coding
+EN10,en,HOW,how to get first client with zero budget

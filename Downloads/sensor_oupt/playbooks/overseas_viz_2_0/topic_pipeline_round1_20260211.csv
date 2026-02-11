@@ -1,0 +1,21 @@
+topic_id,source_url,title,publish_time,topic,chart_type,tool,region,language,demand_score,localization_score,cost_score,distribution_score,monetization_score,copyright_risk,final_score,pool_tier,status,owner,next_action,notes
+T0001,https://search.example/baidu,模板包卖多少钱合适呢,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,18,16,18,12,15,1,78,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=autocomplete
+T0002,https://search.example/baidu,模板包卖多少钱合适一个月,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,18,16,18,12,15,1,78,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=autocomplete
+T0003,https://search.example/baidu,卖模板和做服务哪个更赚钱呢知乎,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,13,16,18,12,15,1,73,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0004,https://search.example/baidu,卖模板赚钱吗现在,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,13,16,18,12,15,1,73,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0005,https://search.example/baidu,卖模板赚钱吗知乎,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,13,16,18,12,15,1,73,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0006,https://search.example/baidu,报价后客户不回复为什么呢怎么回答,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,21,16,12,10,14,1,72,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0007,https://search.example/baidu,为什么报价完客户就不回复了,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,21,16,12,10,14,1,72,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0008,https://search.example/baidu,报价后客户不回复为什么不退款呢,2026-02-11 20:51,模板定价与成交优化助手,bar,Canva,CN,zh,21,16,12,10,14,1,72,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0009,https://search.example/baidu,门店老板怎么做同城获客赚钱,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,18,18,12,10,14,1,71,production_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=autocomplete
+T0010,https://search.example/baidu,门店老板怎么做同城获客的工作,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,21,18,12,10,8,1,68,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0011,https://search.example/baidu,门店老板怎么做同城获客工作的,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,21,18,12,10,8,1,68,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0012,https://search.example/baidu,同城流量怎么做更精准,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,21,18,12,10,8,1,68,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0013,https://search.example/baidu,同城流量怎么做出来的,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,21,18,12,10,8,1,68,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0014,https://search.example/baidu,同城流量怎么做推广,2026-02-11 20:51,同城首单获客路径生成器,bar,Canva,CN,zh,21,18,12,10,8,1,68,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0015,https://search.example/google,私 域 流量 怎么 做,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,21,16,12,8,8,1,64,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=google; signal_type=related_search
+T0016,https://search.example/baidu,ai文案工具 哪个好用一点,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,13,16,18,8,8,1,62,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0017,https://search.example/baidu,ai 文案,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,13,16,18,8,8,1,62,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=baidu; signal_type=related_search
+T0018,https://search.example/google,ai 文案 生成 器 在线,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,13,16,18,8,8,1,62,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=google; signal_type=related_search
+T0019,https://search.example/google,ai 文案 生成 器 免费,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,13,16,18,8,8,1,62,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=google; signal_type=related_search
+T0020,https://search.example/google,ai 生成 文案 免費,2026-02-11 20:51,有流量没成交诊断器,bar,Canva,CN,zh,13,16,18,8,8,1,62,observation_pool,new,AI,生成为静态+动态双版本初稿,engine=google; signal_type=related_search

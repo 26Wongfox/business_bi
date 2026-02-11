@@ -1,0 +1,31 @@
+seed_id,lang,w_type,query_prefix
+ZH01,zh,WHO,新手宝妈在家做副业 谁会买
+ZH02,zh,WHO,下班后做AI工具 谁最需要
+ZH03,zh,WHO,会做Excel模板 谁愿意付费
+ZH04,zh,WHEN,上班族副业内容 什么时候发
+ZH05,zh,WHEN,AI小工具上线 什么时候最合适
+ZH06,zh,WHEN,零粉账号带货 什么时候容易起量
+ZH07,zh,WHERE,AI模板做好了 去哪里卖
+ZH08,zh,WHERE,个人做副业 去哪里找第一批客户
+ZH09,zh,WHERE,不会投流 去哪里拿自然流量
+ZH10,zh,WHAT,一个人业余时间 做什么AI副业
+ZH11,zh,WHAT,会写提示词 可以做什么产品
+ZH12,zh,WHAT,做职场内容 能卖什么工具
+ZH13,zh,WHY,有咨询没下单 为什么
+ZH14,zh,WHY,模板有人看没人买 为什么
+ZH15,zh,WHY,副业做一阵就停了 为什么
+ZH16,zh,HOW,完全不会代码 怎么做可收费工具
+ZH17,zh,HOW,每天1小时 怎么做稳定副业收入
+ZH18,zh,HOW,先卖模板再做工具 怎么安排
+ZH19,zh,HOW,做中英文双语内容 怎么提高转化
+ZH20,zh,HOW,从0到首单 怎么走最短路径
+EN01,en,WHO,who buys ai templates from solo creators
+EN02,en,WHO,who pays for productivity ai micro tools
+EN03,en,WHEN,when is best time to launch a side hustle tool
+EN04,en,WHEN,when to post for first paying clients
+EN05,en,WHERE,where to sell prompt packs online
+EN06,en,WHERE,where to find first freelance clients fast
+EN07,en,WHAT,what ai tool can one person build in a week
+EN08,en,WHY,why content gets traffic but no sales
+EN09,en,HOW,how to build a no code ai side hustle
+EN10,en,HOW,how to get first paying user with zero budget

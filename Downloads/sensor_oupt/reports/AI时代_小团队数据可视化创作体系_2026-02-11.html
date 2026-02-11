@@ -1,0 +1,325 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>AI时代_小团队数据可视化创作体系_2026-02-11</title><style>
+:root { --bg:#f4f7fb; --card:#fff; --text:#1f2937; --line:#d7deea; --accent:#0b5fff; }
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#f7faff 0%,#f1f5fb 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',Arial,sans-serif;}
+.wrap{max-width:1024px;margin:24px auto;padding:0 16px 48px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 30px;box-shadow:0 8px 28px rgba(15,23,42,.06)}
+h1{font-size:34px;line-height:1.25;margin:0 0 12px}
+h2{font-size:25px;line-height:1.35;margin:32px 0 12px;padding-left:10px;border-left:4px solid var(--accent)}
+h3{font-size:20px;line-height:1.4;margin:22px 0 10px}
+p,li{font-size:16px;line-height:1.8}
+ul,ol{padding-left:22px}
+code{background:#f3f6fc;padding:2px 6px;border-radius:6px;font-size:.92em}
+pre{background:#111827;color:#e5e7eb;border-radius:10px;padding:14px;overflow:auto}
+blockquote{margin:16px 0;padding:8px 14px;border-left:4px solid #93c5fd;background:#eff6ff;color:#1e3a8a;border-radius:6px}
+table{width:100%;border-collapse:collapse;margin:12px 0 18px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#f8fafc}
+hr{border:none;border-top:1px solid var(--line);margin:26px 0}
+.footer{margin-top:28px;color:#6b7280;font-size:12px}
+</style></head><body><div class='wrap'><article class='card'><h1 id="ai-305">AI时代小团队数据可视化创作体系 3.0（5人团队・多账号运营版）</h1>
+<blockquote>
+<p>基于 <code>海外数据可视化内容生产_2.0_人机协同重塑_2026-02-11.md</code> 升级。
+目标场景：6个月后，5人团队，多账号分赛道运营，半自动化生产，最终发布审核权保留在负责人手上。</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 目标与适用边界</h2>
+<h2 id="11">1.1 核心目标</h2>
+<ul>
+<li>把“单账号内容生产”升级为“多账号、分赛道、可复用的内容工厂”。</li>
+<li>在不牺牲质量和合规的前提下，将团队人效提升到可持续周更节奏。</li>
+<li>建立团队级知识资产（素材、灵感、案例、工具、提示词），降低对个人经验依赖。</li>
+</ul>
+<h2 id="12">1.2 适用边界</h2>
+<ul>
+<li>适用：数据可视化图文/短视频/长文内容团队（3-8人）。</li>
+<li>不适用：纯资讯搬运、完全自动发布、无人工审校的账号体系。</li>
+</ul>
+<hr />
+<h2 id="2-5">2. 组织设计（5人最小作战单元）</h2>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th style="text-align: right;">人数</th>
+<th>主要职责</th>
+<th style="text-align: right;">AI替代比例目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主编/策略负责人</td>
+<td style="text-align: right;">1</td>
+<td>赛道策略、选题拍板、发布终审、节奏控制</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr>
+<td>研究与素材编辑</td>
+<td style="text-align: right;">1</td>
+<td>海外源采集、事实校验、数据补全</td>
+<td style="text-align: right;">40%</td>
+</tr>
+<tr>
+<td>内容编导（图文+视频）</td>
+<td style="text-align: right;">1</td>
+<td>脚本结构、叙事重构、多平台改编</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr>
+<td>设计与可视化制作</td>
+<td style="text-align: right;">1</td>
+<td>图表设计、封面、视觉规范、模板化</td>
+<td style="text-align: right;">35%</td>
+</tr>
+<tr>
+<td>运营与增长</td>
+<td style="text-align: right;">1</td>
+<td>多账号排期、投放测试、私域承接、复盘</td>
+<td style="text-align: right;">45%</td>
+</tr>
+</tbody>
+</table>
+<p>协作原则：
+- AI负责规模化和初稿，团队负责判断、表达、风险与发布。
+- 主编拥有最终 <code>publish_review</code> 一票决策权。</p>
+<hr />
+<h2 id="3">3. 多账号分赛道运营模型</h2>
+<h2 id="31">3.1 账号分层</h2>
+<ul>
+<li>A类（旗舰账号）：方法论、行业洞察、品牌权威。</li>
+<li>B类（增长账号）：实操模板、清单、高频问题解法。</li>
+<li>C类（实验账号）：新题材、新视觉、新叙事快速测试。</li>
+</ul>
+<h2 id="32">3.2 赛道矩阵（领域 × 人群 × 变现方向）</h2>
+<table>
+<thead>
+<tr>
+<th>赛道ID</th>
+<th>领域</th>
+<th>目标人群</th>
+<th>内容方向</th>
+<th>对应产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>商业与营销数据可视化</td>
+<td>中小商家/运营</td>
+<td>转化漏斗、定价、复盘看板</td>
+<td>模板包/小课</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>职场效率与汇报</td>
+<td>职场人/分析师</td>
+<td>周报、复盘、汇报图表</td>
+<td>模板订阅</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>行业研究可视化</td>
+<td>咨询/研究用户</td>
+<td>行研框架、数据故事化</td>
+<td>深度报告/咨询</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>教育型可视化教程</td>
+<td>新手创作者</td>
+<td>图表入门、工具教程</td>
+<td>训练营/陪跑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="33">3.3 方向管理机制</h2>
+<ul>
+<li>每个赛道固定“主方向 + 备选方向 + 淘汰方向”。</li>
+<li>每两周一次赛道评审，依据：完读/完播、收藏、线索、成交贡献。</li>
+<li>连续3周低于阈值的方向进入降权或停更。</li>
+</ul>
+<hr />
+<h2 id="4">4. 团队知识库体系（内容生产核心资产）</h2>
+<h2 id="41">4.1 五库一体</h2>
+<ol>
+<li>素材库（Source Library）</li>
+<li>灵感库（Idea Library）</li>
+<li>案例库（Case Library）</li>
+<li>工具库（Tool Library）</li>
+<li>提示词库（Prompt Library）</li>
+</ol>
+<h2 id="42-postgres">4.2 字段级设计（建议先飞书多维表，后迁移Postgres）</h2>
+<h3 id="a-kb_sources">A. <code>kb_sources</code> 素材库</h3>
+<ul>
+<li><code>source_id</code>：素材ID</li>
+<li><code>source_url</code>：链接</li>
+<li><code>platform</code>：来源平台</li>
+<li><code>topic</code>：主题</li>
+<li><code>region</code>：地区</li>
+<li><code>language</code>：语言</li>
+<li><code>publish_time</code>：原发布时间</li>
+<li><code>credibility_score</code>：可信度评分</li>
+<li><code>copyright_level</code>：版权风险等级（low/medium/high）</li>
+<li><code>reuse_type</code>：可复用方式（观点/结构/数据）</li>
+<li><code>owner</code>：维护人</li>
+</ul>
+<h3 id="b-kb_ideas">B. <code>kb_ideas</code> 灵感库</h3>
+<ul>
+<li><code>idea_id</code>：灵感ID</li>
+<li><code>from_source_id</code>：来源素材ID</li>
+<li><code>track_id</code>：赛道</li>
+<li><code>angle</code>：切入角度</li>
+<li><code>audience</code>：目标人群</li>
+<li><code>problem_statement</code>：要解决的问题</li>
+<li><code>content_hypothesis</code>：内容假设</li>
+<li><code>priority</code>：优先级</li>
+<li><code>status</code>：new/tested/approved/rejected</li>
+</ul>
+<h3 id="c-kb_cases">C. <code>kb_cases</code> 案例库</h3>
+<ul>
+<li><code>case_id</code>：案例ID</li>
+<li><code>track_id</code>：赛道</li>
+<li><code>content_type</code>：图文/视频/长文</li>
+<li><code>title</code>：标题</li>
+<li><code>key_structure</code>：结构模板</li>
+<li><code>visual_style</code>：视觉风格</li>
+<li><code>result_metrics</code>：结果摘要（播放、收藏、成交）</li>
+<li><code>lessons</code>：复盘要点</li>
+<li><code>replicable</code>：是否可复用</li>
+</ul>
+<h3 id="d-kb_tools">D. <code>kb_tools</code> 工具库</h3>
+<ul>
+<li><code>tool_id</code>：工具ID</li>
+<li><code>tool_name</code>：工具名称</li>
+<li><code>category</code>：采集/分析/制图/发布/复盘</li>
+<li><code>use_case</code>：适用场景</li>
+<li><code>cost_level</code>：成本级别</li>
+<li><code>stability</code>：稳定性评分</li>
+<li><code>owner</code>：负责人</li>
+<li><code>backup_tool</code>：备选工具</li>
+</ul>
+<h3 id="e-kb_prompts">E. <code>kb_prompts</code> 提示词库</h3>
+<ul>
+<li><code>prompt_id</code>：提示词ID</li>
+<li><code>stage</code>：采集/清洗/改写/分发/复盘</li>
+<li><code>track_id</code>：赛道</li>
+<li><code>input_schema</code>：输入字段规范</li>
+<li><code>prompt_text</code>：提示词正文</li>
+<li><code>output_schema</code>：输出字段规范</li>
+<li><code>quality_score</code>：效果评分</li>
+<li><code>version</code>：版本号</li>
+<li><code>last_validated_at</code>：最近验证时间</li>
+</ul>
+<hr />
+<h2 id="5">5. 生产流程（半自动）</h2>
+<pre><code class="language-text">信号采集 -&gt; 清洗去重 -&gt; 评分分层 -&gt; 入选题池 -&gt; AI初稿 -&gt; 自动质检 -&gt; 人工深改 -&gt; 人工终审 -&gt; 人工发布 -&gt; 数据回收 -&gt; AI复盘
+</code></pre>
+<p>硬规则：
+- 自动化可覆盖采集、标注、初稿、数据回收。
+- 发布前必须经过两道人工关：<code>qa_review</code> + <code>publish_review</code>。
+- 禁止自动直发到正式账号。</p>
+<hr />
+<h2 id="6">6. 自动化工具组合（不是全自动）</h2>
+<h2 id="61">6.1 推荐组合</h2>
+<ul>
+<li>协作与库：飞书多维表/文档</li>
+<li>流程编排：Make 或 n8n</li>
+<li>AI生成：Skills（内容生成、摘要、改写、质检）</li>
+<li>可视化制作：Canva/Figma + 模板组件</li>
+<li>数据回收：平台后台导出 + 自动入表脚本</li>
+</ul>
+<h2 id="62-mermaid">6.2 流程图（Mermaid）</h2>
+<pre><code class="language-mermaid">flowchart TD
+    A[多源采集 RSS/API/手动补录] --&gt; B[Make/n8n 定时触发]
+    B --&gt; C[飞书多维表: 素材库入库]
+    C --&gt; D[Skills: 清洗/标签/去重]
+    D --&gt; E[Skills: 赛道打分 + 选题建议]
+    E --&gt; F{是否进入生产池}
+    F --&gt;|否| G[观察池/归档]
+    F --&gt;|是| H[Skills: 生成图文/视频多版本初稿]
+    H --&gt; I[自动质检: 相似度/事实/来源]
+    I --&gt; J[人工编辑深改]
+    J --&gt; K[主编终审 publish_review]
+    K --&gt;|通过| L[人工发布到多账号]
+    K --&gt;|退回| J
+    L --&gt; M[数据回收入库]
+    M --&gt; N[Skills: 周报复盘 + 下轮调权]
+    N --&gt; C
+</code></pre>
+<hr />
+<h2 id="7">7. 数据结构升级（多账号运营必备）</h2>
+<p>在2.0数据库上增加3张表：</p>
+<h2 id="71-accounts">7.1 <code>accounts</code>（账号主数据）</h2>
+<ul>
+<li><code>account_id</code>、<code>platform</code>、<code>account_name</code>、<code>account_tier</code>（A/B/C）</li>
+<li><code>track_id</code>、<code>owner</code>、<code>status</code>、<code>created_at</code></li>
+</ul>
+<h2 id="72-track_configs">7.2 <code>track_configs</code>（赛道配置）</h2>
+<ul>
+<li><code>track_id</code>、<code>track_name</code>、<code>audience</code>、<code>content_pillars</code></li>
+<li><code>success_metrics</code>、<code>risk_policy</code>、<code>active_flag</code></li>
+</ul>
+<h2 id="73-content_account_map-">7.3 <code>content_account_map</code>（内容-账号映射）</h2>
+<ul>
+<li><code>job_id</code>、<code>account_id</code>、<code>adaptation_type</code>（原发/改写/剪辑）</li>
+<li><code>publish_priority</code>、<code>publish_window</code>、<code>result_score</code></li>
+</ul>
+<p>作用：
+- 解决“一条内容多账号分发”的归因与复用问题。
+- 支持“同题多版本”比较哪个账号和表达方式更有效。</p>
+<hr />
+<h2 id="8">8. 周期机制（周计划 + 月复盘）</h2>
+<h2 id="81">8.1 周节奏</h2>
+<ul>
+<li>周一：赛道评审 + 选题会（定本周10条候选）</li>
+<li>周二到周四：生产与发布（每天至少2条）</li>
+<li>周五：数据复盘 + 下周实验项确认</li>
+</ul>
+<h2 id="82">8.2 月复盘</h2>
+<ul>
+<li>看方向：哪个赛道带来最多有效线索和成交</li>
+<li>看内容：哪些结构/封面/CTA转化最高</li>
+<li>看流程：哪个环节耗时最长，是否可继续自动化</li>
+</ul>
+<hr />
+<h2 id="9-kpi">9. KPI（团队版）</h2>
+<h2 id="91">9.1 生产效率</h2>
+<ul>
+<li>周产能：&gt;= 10条内容（含跨平台改编）</li>
+<li>人均有效产出：&gt;= 2条/周</li>
+<li>AI参与率：&gt;= 75%</li>
+</ul>
+<h2 id="92">9.2 运营效果</h2>
+<ul>
+<li>多账号总曝光月增速：&gt;= 20%</li>
+<li>收藏率（图文）：&gt;= 6%</li>
+<li>完播率（视频）：&gt;= 22%</li>
+</ul>
+<h2 id="93">9.3 商业结果</h2>
+<ul>
+<li>线索转化率：&gt;= 2.5%</li>
+<li>低价产品转化率：&gt;= 3%</li>
+<li>咨询/服务成交数：每月持续增长</li>
+</ul>
+<h2 id="94">9.4 质量与风险</h2>
+<ul>
+<li>来源标注完整率：100%</li>
+<li>严重事实错误：0</li>
+<li>未经终审发布：0</li>
+</ul>
+<hr />
+<h2 id="10-180">10. 180天路线图</h2>
+<ol>
+<li>第1-30天：搭建五库、统一字段、跑通单赛道半自动流程。</li>
+<li>第31-60天：上线3赛道，建立A/B/C账号分层，形成周复盘机制。</li>
+<li>第61-90天：沉淀高转化模板，形成“同题多版本”标准作业。</li>
+<li>第91-180天：扩展到4赛道，建立内容资产复用系统和团队训练机制。</li>
+</ol>
+<hr />
+<h2 id="11_1">11. 实施底线（必须遵守）</h2>
+<ol>
+<li>AI可以生成，但不能绕过人工审核直接发布。</li>
+<li>所有内容必须可追溯到素材来源和版本记录。</li>
+<li>任何赛道扩张前，先证明已有赛道可持续产出与转化。</li>
+<li>账号增长优先级低于品牌安全和长期信任。</li>
+</ol><div class='footer'>Generated on 2026-02-11</div></article></div></body></html>

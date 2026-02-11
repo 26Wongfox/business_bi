@@ -1,0 +1,123 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Round3 Top3</title><style>
+:root{--bg:#f6f8fb;--card:#fff;--text:#1f2937;--line:#dbe2ea;--brand:#0f766e}
+body{margin:0;background:linear-gradient(180deg,#edf5ff,#f8fbff 30%,#f6f8fb);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;color:var(--text)}
+.wrap{max-width:980px;margin:20px auto;padding:0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 8px 28px rgba(0,0,0,.05)}
+h1{font-size:34px;line-height:1.2;margin:.2em 0 .6em;color:#0b3a75}
+h2{font-size:25px;margin:1.1em 0 .55em;border-left:6px solid var(--brand);padding-left:10px}
+h3{font-size:19px;margin:.9em 0 .4em;color:#0f766e}
+p,li{font-size:16px;line-height:1.75} ul,ol{padding-left:24px}
+code,pre{background:#f3f4f6;border-radius:8px} pre{padding:12px;overflow:auto}
+hr{border:none;border-top:1px solid var(--line);margin:16px 0}
+</style></head><body><div class="wrap"><div class="card"><h1>Round3 Top3 方向：可上线版本清单</h1>
+<p>数据依据：<code>data/search_research_20260211_195604</code>、<code>reports/round3_quick_insights_20260211_200217.md</code></p>
+<hr />
+<h2>1) 模板定价与成交优化助手（工具型）</h2>
+<h3>核心功能（V1）</h3>
+<ol>
+<li>输入模板类型、目标用户、竞品价格区间</li>
+<li>输出三档定价（低/中/高）+ 推荐主售档</li>
+<li>输出首发活动方案（折扣、加赠、限时）</li>
+<li>输出成交文案（标题、卖点、CTA、FAQ）</li>
+</ol>
+<h3>页面结构</h3>
+<ul>
+<li>首页：一句话价值 + 免费试用入口</li>
+<li>输入页：产品信息表单</li>
+<li>结果页：定价建议 + 文案建议 + 下载按钮</li>
+<li>支付页：订阅/按次购买</li>
+</ul>
+<h3>定价建议</h3>
+<ul>
+<li>免费版：每日1次</li>
+<li>Pro版：29元/月</li>
+<li>商家版：99元/月（含历史记录和复盘）</li>
+</ul>
+<h3>7天开发计划</h3>
+<ul>
+<li>Day1：字段定义、输出格式定义</li>
+<li>Day2：定价规则v1（区间+心理价）</li>
+<li>Day3：Prompt链路与结果模板</li>
+<li>Day4：Web表单页 + 结果页</li>
+<li>Day5：支付与权限（免费/Pro）</li>
+<li>Day6：10个样本内测并修正</li>
+<li>Day7：上线并发布首发内容</li>
+</ul>
+<hr />
+<h2>2) 同城首单获客路径生成器（工具型）</h2>
+<h3>核心功能（V1）</h3>
+<ol>
+<li>输入城市级别、行业、可投入时间</li>
+<li>输出首单路径（7天任务清单）</li>
+<li>输出同城渠道建议（平台+动作+频率）</li>
+<li>输出私信/评论区获客话术</li>
+</ol>
+<h3>页面结构</h3>
+<ul>
+<li>首页：适合人群与使用场景</li>
+<li>输入页：城市+行业+时间+预算</li>
+<li>结果页：7天任务看板 + 话术包</li>
+<li>复盘页：填写执行结果，自动给优化建议</li>
+</ul>
+<h3>定价建议</h3>
+<ul>
+<li>体验版：19元/次</li>
+<li>月卡：49元/月</li>
+<li>组合包：79元（含模板包）</li>
+</ul>
+<h3>7天开发计划</h3>
+<ul>
+<li>Day1：同城渠道库初始化（抖音/快手/视频号/微信）</li>
+<li>Day2：行业模板（宝妈/门店/本地服务）</li>
+<li>Day3：路径生成逻辑与Prompt</li>
+<li>Day4：输入/结果页开发</li>
+<li>Day5：话术包接入下载</li>
+<li>Day6：3类人群试跑，收反馈</li>
+<li>Day7：发售+案例帖上线</li>
+</ul>
+<hr />
+<h2>3) 有流量没成交诊断器（工具型）</h2>
+<h3>核心功能（V1）</h3>
+<ol>
+<li>输入内容文本或商品页文案</li>
+<li>输出诊断结果（钩子、信任、CTA、价格锚点）</li>
+<li>输出改写版文案（短版/长版）</li>
+<li>输出评论区成交回复模板</li>
+</ol>
+<h3>页面结构</h3>
+<ul>
+<li>首页：问题场景（有流量没成交）</li>
+<li>输入页：粘贴内容 + 目标用户</li>
+<li>结果页：问题评分 + 改写建议 + 一键复制</li>
+<li>升级页：人工诊断服务入口</li>
+</ul>
+<h3>定价建议</h3>
+<ul>
+<li>按次：19-39元</li>
+<li>订阅：99元/月（不限次数）</li>
+<li>人工诊断加购：199元/次</li>
+</ul>
+<h3>7天开发计划</h3>
+<ul>
+<li>Day1：诊断维度定义（4大维度）</li>
+<li>Day2：评分规则+Prompt模板</li>
+<li>Day3：改写模板（小红书/朋友圈/商品页）</li>
+<li>Day4：页面与结果展示</li>
+<li>Day5：支付与导出（md/txt）</li>
+<li>Day6：内测20篇内容，优化输出质量</li>
+<li>Day7：上线+发布前后对比案例</li>
+</ul>
+<hr />
+<h2>联合上线建议（优先顺序）</h2>
+<ol>
+<li>先上：<code>模板定价与成交优化助手</code>（变现最直接）</li>
+<li>次上：<code>有流量没成交诊断器</code>（适配大量存量内容用户）</li>
+<li>再上：<code>同城首单获客路径生成器</code>（适合3-5线/乡镇扩张）</li>
+</ol>
+<h2>联合KPI（首周）</h2>
+<ul>
+<li>访问 &gt;= 300</li>
+<li>免费试用 &gt;= 80</li>
+<li>付费 &gt;= 20</li>
+<li>首周留存 &gt;= 30%</li>
+</ul></div></div></body></html>

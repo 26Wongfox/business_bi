@@ -1,0 +1,2 @@
+topic_id,source_url,title,publish_time,topic,chart_type,tool,region,language,demand_score,localization_score,cost_score,distribution_score,monetization_score,copyright_risk,final_score,pool_tier,status,owner,next_action,notes
+T0001,https://example.com/source-1,示例标题,2026-02-11 20:00,模板定价,bar,Canva,CN,zh,18,16,14,11,12,1,70,production_pool,new,AI,生成双版本初稿,示例行可删除

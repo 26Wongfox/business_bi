@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A_文案提示词模板包.md</title><style>
+:root { --bg:#f6f8fb; --card:#ffffff; --text:#1f2937; --muted:#6b7280; --line:#d1d5db; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',Arial,sans-serif; }
+.wrap { max-width:980px; margin:24px auto; padding:0 16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+h1,h2,h3 { line-height:1.3; margin:1em 0 .5em; }
+p,li { line-height:1.7; }
+code,pre { background:#f3f4f6; border-radius:6px; }
+pre { padding:12px; overflow:auto; }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:14px; }
+th,td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.small { color:var(--muted); font-size:12px; margin-top:8px; }
+</style></head>
+<body><div class="wrap"><div class="card"><h1 id="a-ai">A. AI文案提示词模板包（首版）</h1>
+<h2 id="_1">使用说明</h2>
+<ul>
+<li>把 <code>{}</code> 内变量替换为你的信息。</li>
+<li>先跑 3 版，再从中挑 1 版做人工润色。</li>
+</ul>
+<h2 id="1">模板1：小红书选题+标题</h2>
+<pre><code class="language-text">你是小红书内容策划。我的账号定位是：{账号定位}；目标用户是：{目标人群}；本周目标是：{涨粉/引流/成交}。
+请输出：
+1) 10个选题（按“痛点-反常识-结果”结构）
+2) 每个选题3个标题（口语化，避免鸡汤）
+3) 每个标题给一个封面短句（10字内）
+限制：不要重复，不要空话。
+</code></pre>
+<h2 id="2">模板2：公众号文章骨架</h2>
+<pre><code class="language-text">你是公众号编辑。主题：{主题}；读者：{读者画像}；写作目标：{教育/转化/种草}。
+请输出：
+- 文章标题5个
+- 开头3种（故事型/数据型/问题型）
+- 正文结构（3段，每段含核心观点+案例）
+- 结尾CTA 2版（软引导/强引导）
+</code></pre>
+<h2 id="360">模板3：短视频脚本（60秒）</h2>
+<pre><code class="language-text">你是短视频编导。主题：{主题}；受众：{受众}；风格：{干货/反转/陪伴}。
+请生成60秒口播脚本：
+- 0-3秒钩子
+- 4-35秒问题+方法
+- 36-50秒案例
+- 51-60秒行动引导
+并附：镜头建议+字幕关键词。
+</code></pre>
+<h2 id="4">模板4：评论区转化回复</h2>
+<pre><code class="language-text">你是私域转化助手。用户评论：{评论内容}；我的产品：{产品名称}；价格：{价格}。
+请给我3条回复：
+- 1条建立信任
+- 1条解决顾虑
+- 1条引导私信
+要求：口语化，不夸张承诺。
+</code></pre>
+<h2 id="5ai">模板5：AI工具售卖页文案</h2>
+<pre><code class="language-text">你是独立开发者的增长文案顾问。产品：{工具名称}；目标用户：{用户}；核心痛点：{痛点}；价格：{价格}。
+请输出：
+1) 一句话价值主张（15字内）
+2) 卖点3条（功能-结果-节省）
+3) 常见异议与回答4组
+4) 下单按钮文案5条
+</code></pre><p class="small">Generated from local template file.</p></div></div></body></html>
