@@ -1,0 +1,11 @@
+00_入口与规则/统一看板_状态说明_from_v2.md
+00_入口与规则/统一看板_飞书Notion视图配置_from_v2.md
+07_模板与自动化/automation/字段与规则/字段映射模板_from_v2.md
+07_模板与自动化/automation/字段与规则/自动化上线检查清单_from_v2.md
+07_模板与自动化/automation/字段与规则/自动化规则模板_from_v2.csv
+07_模板与自动化/templates/AI协作/5人角色标准提示词卡_from_v2.md
+07_模板与自动化/templates/数据模型/统一内容看板_模板_from_v2.csv
+07_模板与自动化/templates/数据模型/账号主数据_模板_from_v2.csv
+07_模板与自动化/templates/数据模型/飞书字段模板_内容库_from_v2.csv
+07_模板与自动化/templates/数据模型/飞书字段模板_复盘库_from_v2.csv
+07_模板与自动化/templates/数据模型/飞书字段模板_选题库_from_v2.csv
