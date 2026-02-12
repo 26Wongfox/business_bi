@@ -1,7 +1,0 @@
-任务ID,账号,赛道,内容标题,内容类型,负责人,协作人,当前状态,优先级,计划发布时间,截止时间,发布时间,素材链接,稿件链接,封面链接,发布链接,数据表现摘要,复盘结论,下步动作,阻塞项,备注
-TASK-001,账号A,职场成长,为什么AI时代需要个人知识库,图文,王青,陈墨;赵宁,选题中,高,2026-02-14 20:00,2026-02-13 22:00,,,,,,,,补充3个案例,,
-TASK-002,账号B,效率工具,5个高效提示词模板,短视频,王青,陈墨,制作中,高,2026-02-13 20:30,2026-02-13 18:00,,https://example.com/materials/002,https://example.com/draft/002,,,,,完成口播稿第2版,,
-TASK-003,账号C,商业认知,小团队如何做账号矩阵,图文,李然,孙越,审核中,中,2026-02-13 21:00,2026-02-13 19:00,,https://example.com/materials/003,https://example.com/draft/003,https://example.com/cover/003,,,,人工核对数据来源,,
-TASK-004,账号D,AI应用,AI复盘框架一页搞定,图文,赵宁,李然,待发布,中,2026-02-13 22:00,2026-02-13 21:30,,https://example.com/materials/004,https://example.com/draft/004,https://example.com/cover/004,,,,设置定时发布,,
-TASK-005,账号E,数据分析,内容复用率提升30%的方法,图文,赵宁,孙越,已发布,高,2026-02-12 20:00,2026-02-12 18:00,2026-02-12 20:03,https://example.com/materials/005,https://example.com/draft/005,https://example.com/cover/005,https://example.com/publish/005,,,明日回填24h数据,,
-TASK-006,账号F,创作方法,从选题到发布的SOP,长文,孙越,李然;王青,复盘,中,2026-02-11 20:00,2026-02-11 18:00,2026-02-11 20:05,https://example.com/materials/006,https://example.com/draft/006,https://example.com/cover/006,https://example.com/publish/006,24h阅读1.2w 收藏率6.8%,标题A优于标题B且开头案例拉高完读率,沉淀为模板并进入下周选题池,,

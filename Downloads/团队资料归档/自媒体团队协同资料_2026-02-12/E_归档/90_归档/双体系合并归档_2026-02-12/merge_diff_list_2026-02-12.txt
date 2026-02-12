@@ -1,3 +1,0 @@
-00_入口与规则/README_from_v2.md|00_入口与规则/README.md
-00_入口与规则/会议记录/README_from_v2.md|00_入口与规则/会议记录/README.md
-07_模板与自动化/automation/AI协作流程/README_from_v2.md|07_模板与自动化/automation/AI协作流程/README.md

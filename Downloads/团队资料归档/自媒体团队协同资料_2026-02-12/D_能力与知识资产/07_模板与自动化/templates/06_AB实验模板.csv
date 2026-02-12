@@ -1,2 +1,0 @@
-experiment_id,hypothesis,variant_a,variant_b,metric,start_date,end_date,result,decision,owner
-exp-001,标题更短提升点击,长标题,短标题,CTR,2026-02-12,2026-02-19,,,
