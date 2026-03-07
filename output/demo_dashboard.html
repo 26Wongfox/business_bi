@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>金域医学 BI Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #eef6f8;
+      --ink: #0f1a20;
+      --muted: #4a5a66;
+      --card: #ffffff;
+      --accent: #1c6fa3;
+      --accent-2: #3aa0a8;
+      --accent-3: #4c7bd9;
+      --accent-4: #6cc4c9;
+      --grid: #dbe9ef;
+      --ring: rgba(28, 111, 163, 0.15);
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1000px 700px at 10% -10%, #ffffff 0%, var(--bg) 60%),
+        radial-gradient(900px 600px at 105% 10%, #f5fbff 0%, var(--bg) 60%),
+        linear-gradient(180deg, #f7fbfd 0%, var(--bg) 100%);
+      color: var(--ink);
+      font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(28,111,163,0.06) 0 2px, transparent 2px),
+        radial-gradient(circle at 60% 40%, rgba(58,160,168,0.05) 0 2px, transparent 2px),
+        radial-gradient(circle at 80% 80%, rgba(76,123,217,0.05) 0 2px, transparent 2px);
+      background-size: 120px 120px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    header {
+      padding: 28px 36px 8px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: 30px;
+      margin: 0 0 6px 0;
+    }
+    header p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--grid);
+      background: #fff;
+      font-size: 12px;
+      color: var(--muted);
+      box-shadow: var(--shadow);
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      padding: 16px 36px 32px;
+      grid-template-columns: repeat(12, 1fr);
+      position: relative;
+      z-index: 1;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--grid);
+    }
+    .kpi {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi .label { color: var(--muted); font-size: 12px; }
+    .kpi .value { font-size: 22px; font-weight: 700; letter-spacing: 0.2px; }
+    .kpi::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, var(--ring) 0%, rgba(31,111,120,0) 70%);
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .subtle {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 4px 0 0 0;
+    }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(6, 1fr); }
+      .span-8 { grid-column: span 6; }
+      .span-6 { grid-column: span 6; }
+      .span-4 { grid-column: span 3; }
+      .span-3 { grid-column: span 3; }
+    }
+    @media (max-width: 720px) {
+      header { padding: 20px; }
+      .grid { grid-template-columns: repeat(1, 1fr); padding: 12px 20px 24px; }
+      .span-3, .span-4, .span-6, .span-8, .span-12 { grid-column: span 1; }
+      header h1 { font-size: 22px; }
+      .tag { display: none; }
+      .card { padding: 14px; }
+      .kpi .value { font-size: 20px; }
+      canvas { max-height: 260px; }
+    }
+
+    .table-wrap { overflow: auto; border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { padding: 8px 6px; }
+    thead tr { text-align: left; border-bottom: 1px solid var(--grid); }
+    tbody tr { border-bottom: 1px solid var(--grid); }
+
+    @media (max-width: 720px) {
+      table thead { display: none; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      tbody tr { margin-bottom: 10px; border: 1px solid var(--grid); border-radius: 10px; padding: 6px; background: #fff; }
+      td { padding: 6px; }
+      td::before { content: attr(data-label); display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>金域医学 BI Demo</h1>
+      <p>管理层总览 · 销售分析 · 回款与账龄 · 风险预警 · 商机线索</p>
+    </div>
+    <div class="tag">数据来源：模拟数据 · 刷新频率：周更</div>
+  </header>
+
+  <div class="grid">
+    <div class="card span-12" style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+      <div style="font-weight:600;">交互控制</div>
+      <label style="font-size:12px; color:var(--muted);">时间范围</label>
+      <select id="from-month" style="padding:6px 8px; border:1px solid var(--grid); border-radius:8px;"></select>
+      <span style="color:var(--muted);">至</span>
+      <select id="to-month" style="padding:6px 8px; border:1px solid var(--grid); border-radius:8px;"></select>
+      <label style="font-size:12px; color:var(--muted); margin-left:8px;">趋势指标</label>
+      <select id="trend-metric" style="padding:6px 8px; border:1px solid var(--grid); border-radius:8px;">
+        <option value="sales">折后销售额</option>
+        <option value="specimen">标本量</option>
+      </select>
+      <label style="font-size:12px; color:var(--muted); margin-left:8px;">线索搜索</label>
+      <input id="lead-search" placeholder="医院/政策/疾病线关键字" style="padding:6px 8px; border:1px solid var(--grid); border-radius:8px; min-width:220px;">
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- KPI -->
+    <div class="card span-3 kpi"><div class="label">折后销售额（合计）</div><div class="value" id="kpi-sales">-</div><div class="subtle">衡量市场规模与结构</div></div>
+    <div class="card span-3 kpi"><div class="label">标本量（合计）</div><div class="value" id="kpi-specimen">-</div><div class="subtle">反映业务活跃度</div></div>
+    <div class="card span-3 kpi"><div class="label">未回款金额（合计）</div><div class="value" id="kpi-unpaid">-</div><div class="subtle">回款风险监控</div></div>
+    <div class="card span-3 kpi"><div class="label">未来3个月预测回款</div><div class="value" id="kpi-forecast">-</div><div class="subtle">短期现金流预估</div></div>
+
+    <!-- Sales trend -->
+    <div class="card span-8">
+      <div class="section-title">折后销售额月度趋势</div>
+      <div class="subtle">观察增长稳定性与季节性波动</div>
+      <canvas id="chart-sales"></canvas>
+    </div>
+
+    <!-- Aging -->
+    <div class="card span-4">
+      <div class="section-title">账龄分布（未回款）</div>
+      <div class="subtle">快速定位逾期结构</div>
+      <canvas id="chart-aging"></canvas>
+    </div>
+
+    <!-- Top hospitals/items -->
+    <div class="card span-6">
+      <div class="section-title">Top10 医院</div>
+      <div class="subtle">折后销量排名</div>
+      <canvas id="chart-hospitals"></canvas>
+    </div>
+    <div class="card span-6">
+      <div class="section-title">Top10 项目（营销套餐）</div>
+      <div class="subtle">重点项目贡献</div>
+      <canvas id="chart-items"></canvas>
+    </div>
+
+    <!-- Tier 3 trend -->
+    <div class="card span-8">
+      <div class="section-title">三级医院近三年趋势（折后销售额）</div>
+      <div class="subtle">观察高等级医院的结构性变化</div>
+      <canvas id="chart-tier3"></canvas>
+    </div>
+
+    <!-- Opportunity score -->
+    <div class="card span-4">
+      <div class="section-title">商机评分分布</div>
+      <div class="subtle">线索质量分层</div>
+      <canvas id="chart-lead-score"></canvas>
+    </div>
+
+    <!-- Risk -->
+    <div class="card span-12">
+      <div class="section-title">回款周期风险（DSO Top10）</div>
+      <div class="subtle">回款周期过长的高风险医院</div>
+      <canvas id="chart-risk"></canvas>
+    </div>
+
+    <!-- Opportunity list -->
+    <div class="card span-12">
+      <div class="section-title">商机线索清单</div>
+      <div class="subtle">基于政策/报告的自动化线索（示例）</div>
+      <div class="table-wrap">
+        <table id="lead-table">
+          <thead>
+            <tr>
+              <th>来源</th>
+              <th>区域</th>
+              <th>疾病线</th>
+              <th>政策关键词</th>
+              <th>评分</th>
+              <th>建议动作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadData() {
+      const res = await fetch('./demo_data.json');
+      return await res.json();
+    }
+
+    function fmt(n) {
+      if (n == null) return '-';
+      return Intl.NumberFormat('zh-CN', { maximumFractionDigits: 0 }).format(n);
+    }
+
+    function animateValue(el, value) {
+      const duration = 800;
+      const start = 0;
+      const startTime = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - startTime) / duration);
+        const v = Math.floor(start + (value - start) * p);
+        el.textContent = fmt(v);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function buildCharts(data) {
+      Chart.defaults.color = '#4a5a66';
+      Chart.defaults.font.family = '"Noto Sans SC", system-ui, -apple-system, sans-serif';
+      Chart.defaults.plugins.legend.display = false;
+
+      animateValue(document.getElementById('kpi-sales'), data.metrics.sales_post_total);
+      animateValue(document.getElementById('kpi-specimen'), data.metrics.specimen_total);
+      animateValue(document.getElementById('kpi-unpaid'), data.metrics.unpaid_total);
+      animateValue(document.getElementById('kpi-forecast'), data.metrics.forecast_3m);
+
+      const chartSales = new Chart(document.getElementById('chart-sales'), {
+        type: 'line',
+        data: {
+          labels: data.sales_monthly.map(d => d.month),
+          datasets: [{
+            label: '折后销售额',
+            data: data.sales_monthly.map(d => d.value),
+            borderColor: '#1c6fa3',
+            backgroundColor: 'rgba(28,111,163,0.15)',
+            tension: 0.25,
+            fill: true
+          }]
+        },
+        options: {
+          scales: {
+            x: { grid: { color: 'rgba(0,0,0,0.04)' } },
+            y: { grid: { color: 'rgba(0,0,0,0.04)' } }
+          },
+          animation: { duration: 800 }
+        }
+      });
+
+      const chartAging = new Chart(document.getElementById('chart-aging'), {
+        type: 'doughnut',
+        data: {
+          labels: data.aging.map(d => d.bucket),
+          datasets: [{
+            data: data.aging.map(d => d.value),
+            backgroundColor: ['#1c6fa3','#3aa0a8','#6cc4c9','#4c7bd9','#9db7e8']
+          }]
+        },
+        options: { cutout: '62%' }
+      });
+
+      const chartHospitals = new Chart(document.getElementById('chart-hospitals'), {
+        type: 'bar',
+        data: {
+          labels: data.top_hospitals.map(d => d.name),
+          datasets: [{
+            label: '折后销售额',
+            data: data.top_hospitals.map(d => d.value),
+            backgroundColor: '#1c6fa3'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: { x: { grid: { color: 'rgba(0,0,0,0.04)' } } }
+        }
+      });
+
+      const chartItems = new Chart(document.getElementById('chart-items'), {
+        type: 'bar',
+        data: {
+          labels: data.top_items.map(d => d.name),
+          datasets: [{
+            label: '折后销售额',
+            data: data.top_items.map(d => d.value),
+            backgroundColor: '#4c7bd9'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: { x: { grid: { color: 'rgba(0,0,0,0.04)' } } }
+        }
+      });
+
+      const chartRisk = new Chart(document.getElementById('chart-risk'), {
+        type: 'bar',
+        data: {
+          labels: data.risk_dso.map(d => d.name),
+          datasets: [{
+            label: 'DSO (天)',
+            data: data.risk_dso.map(d => d.value),
+            backgroundColor: '#3aa0a8'
+          }]
+        },
+        options: {
+          scales: { y: { grid: { color: 'rgba(0,0,0,0.04)' } } }
+        }
+      });
+
+      const chartTier3 = new Chart(document.getElementById('chart-tier3'), {
+        type: 'line',
+        data: {
+          labels: data.tier3_trend.map(d => d.month),
+          datasets: [{
+            label: '三级医院折后销售额',
+            data: data.tier3_trend.map(d => d.value),
+            borderColor: '#4c7bd9',
+            backgroundColor: 'rgba(76,123,217,0.15)',
+            tension: 0.25,
+            fill: true
+          }]
+        },
+        options: {
+          scales: {
+            x: { grid: { color: 'rgba(0,0,0,0.04)' } },
+            y: { grid: { color: 'rgba(0,0,0,0.04)' } }
+          },
+          animation: { duration: 800 }
+        }
+      });
+
+      const chartLeadScore = new Chart(document.getElementById('chart-lead-score'), {
+        type: 'bar',
+        data: {
+          labels: data.lead_score.map(d => d.score),
+          datasets: [{
+            label: '线索数量',
+            data: data.lead_score.map(d => d.count),
+            backgroundColor: '#1c6fa3'
+          }]
+        },
+        options: {
+          scales: { y: { grid: { color: 'rgba(0,0,0,0.04)' } } }
+        }
+      });
+
+      const tbody = document.querySelector('#lead-table tbody');
+      function renderLeads(keyword = '') {
+        tbody.innerHTML = '';
+        const kw = keyword.trim();
+        data.leads
+          .filter(r => !kw || JSON.stringify(r).includes(kw))
+          .forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td data-label="来源">${row.source_file || ''}</td>
+              <td data-label="区域">${row.regions || ''}</td>
+              <td data-label="疾病线">${row.diseases || ''}</td>
+              <td data-label="政策关键词">${row.policies || ''}</td>
+              <td data-label="评分" style="font-weight:600; color: var(--accent);">${row.score}</td>
+              <td data-label="建议动作">${row.action || ''}</td>
+            `;
+            tbody.appendChild(tr);
+          });
+      }
+
+      renderLeads();
+
+      const fromSel = document.getElementById('from-month');
+      const toSel = document.getElementById('to-month');
+      const trendSel = document.getElementById('trend-metric');
+      const leadSearch = document.getElementById('lead-search');
+
+      const months = data.sales_monthly.map(d => d.month);
+      months.forEach(m => {
+        const o1 = document.createElement('option'); o1.value = m; o1.textContent = m; fromSel.appendChild(o1);
+        const o2 = document.createElement('option'); o2.value = m; o2.textContent = m; toSel.appendChild(o2);
+      });
+      fromSel.value = months[0];
+      toSel.value = months[months.length - 1];
+
+      function updateTrend() {
+        const from = fromSel.value;
+        const to = toSel.value;
+        const metric = trendSel.value;
+        const filtered = data.sales_monthly.filter(d => d.month >= from && d.month <= to);
+        chartSales.data.labels = filtered.map(d => d.month);
+        chartSales.data.datasets[0].data = filtered.map(d => d.value);
+        chartSales.data.datasets[0].label = metric === 'sales' ? '折后销售额' : '标本量';
+        if (metric === 'specimen') {
+          chartSales.data.datasets[0].data = filtered.map(d => d.value / 1000);
+        }
+        chartSales.update();
+      }
+
+      fromSel.addEventListener('change', updateTrend);
+      toSel.addEventListener('change', updateTrend);
+      trendSel.addEventListener('change', updateTrend);
+      leadSearch.addEventListener('input', (e) => renderLeads(e.target.value));
+    }
+
+    loadData().then(buildCharts);
+  </script>
+</body>
+</html>
