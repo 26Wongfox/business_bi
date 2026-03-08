@@ -1,0 +1,61 @@
+2026-03-05 21:28:07,169 INFO metabase.util :: Maximum memory available to JVM: 4.0 GB 
+2026-03-05 21:28:11,442 INFO util.encryption :: Saved credentials encryption is DISABLED for this Metabase instance. 🔓 
+ For more information, see https://metabase.com/docs/latest/operations-guide/encrypting-database-details-at-rest.html 
+2026-03-05 21:28:11,834 WARN app-db.env :: WARNING: Using Metabase with an H2 application database is not recommended for production deployments. For production deployments, we highly recommend using Postgres, MySQL, or MariaDB instead. If you decide to continue to use H2, please be sure to back up the database file regularly. For more information, see https://metabase.com/docs/latest/operations-guide/migrating-from-h2.html 
+2026-03-05 21:28:29,560 INFO driver.impl :: Registered abstract driver :sql  🚚 
+2026-03-05 21:28:29,656 INFO driver.impl :: Registered abstract driver :sql-jdbc (parents: [:sql]) 🚚 
+2026-03-05 21:28:29,683 INFO driver.impl :: Registered driver :h2 (parents: [:sql-jdbc]) 🚚 
+2026-03-05 21:28:29,772 INFO driver.impl :: Registered driver :mysql (parents: [:sql-jdbc]) 🚚 
+2026-03-05 21:28:29,827 INFO driver.impl :: Registered driver :postgres (parents: [:sql-jdbc]) 🚚 
+2026-03-05 21:28:31,115 INFO core.core :: 
+Metabase v0.58.8.3 (be2c84c) 
+
+Copyright © 2026 Metabase, Inc. 
+
+Metabase Enterprise Edition extensions are NOT PRESENT. 
+2026-03-05 21:28:31,126 INFO core.core :: Starting Metabase in STANDALONE mode 
+2026-03-05 21:28:31,350 INFO server.instance :: Launching Embedded Jetty Webserver with config:
+ {:port 3000, :send-server-version? false}
+ 
+2026-03-05 21:28:31,396 ERROR core.core :: Metabase Initialization FAILED 
+java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:3000
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:313)
+	at org.eclipse.jetty.server.Server.lambda$doStart$0(Server.java:597)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:593)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:93)
+	at metabase.server.instance$start_web_server_BANG_.invokeStatic(instance.clj:130)
+	at metabase.server.instance$start_web_server_BANG_.invoke(instance.clj:114)
+	at metabase.core.core$start_normally.invokeStatic(core.clj:251)
+	at metabase.core.core$start_normally.invoke(core.clj:245)
+	at metabase.core.core$entrypoint.invokeStatic(core.clj:288)
+	at metabase.core.core$entrypoint.doInvoke(core.clj:279)
+	at clojure.lang.RestFn.invoke(RestFn.java:400)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.RestFn.applyTo(RestFn.java:135)
+	at clojure.lang.Var.applyTo(Var.java:707)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at metabase.core.bootstrap$_main.invokeStatic(bootstrap.clj:36)
+	at metabase.core.bootstrap$_main.doInvoke(bootstrap.clj:29)
+	at clojure.lang.RestFn.invoke(RestFn.java:400)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.RestFn.applyTo(RestFn.java:135)
+	at metabase.core.bootstrap.main(Unknown Source)
+Caused by: java.net.SocketException: Operation not permitted
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:577)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 32 more
